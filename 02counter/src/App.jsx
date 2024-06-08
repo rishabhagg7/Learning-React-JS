@@ -9,8 +9,19 @@ function App() {
   // let counter = 15
   const addValue = ()=> {
     // counter += 1
-    if(counter < 20)
+    if(counter < 20){
       setCounter(counter+1)
+      setCounter(counter+1)
+      setCounter(counter+1)
+      setCounter(counter+1)
+      // A batch of 4 is created and it is executed only one time, so value will increase by one only
+
+      setCounter(prevCounter => prevCounter+1)
+      setCounter(prevCounter => prevCounter+1)
+      setCounter(prevCounter => prevCounter+1)
+      setCounter(prevCounter => prevCounter+1)
+      // The function has callback function holding previous value, since we are increasing the prev value of the variable, it will increase the value by 4 here
+    }
   }
   const subValue = function(){
     // counter -= 1
